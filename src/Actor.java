@@ -24,6 +24,11 @@ public class Actor extends Person {
 
     @Override
     public int hashCode() {
-        return java.util.Objects.hash(getName(), getSurname(), height);
+        return Objects.hash(getName(), getSurname(), height);
+    }
+
+    @Override
+    public String toString() {
+        return getName() + " " + getSurname() + " (" + getHeight() + ")";
     }
 }

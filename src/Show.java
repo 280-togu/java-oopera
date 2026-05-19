@@ -14,9 +14,7 @@ public class Show {
     }
     public void printActors() {
         for (Actor actor : listOfActors) {
-            System.out.println(actor.getName() + " " +
-                    actor.getSurname() +
-                    " (" + actor.getHeight() + ")");
+            System.out.println(actor);
         }
     }
     public void addActor(Actor actor) {
