@@ -24,6 +24,11 @@ public class Show {
     public ArrayList<Actor> getListOfActors() {
         return listOfActors;
     }
+
+    public void printDirector() {
+        System.out.println("Режиссер:" + director);
+    }
+
     public void printActors() {
         for (Actor actor : listOfActors) {
             System.out.println(actor);

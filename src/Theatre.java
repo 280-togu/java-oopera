@@ -10,8 +10,8 @@ public class Theatre {
         Director director1 = new Director("Сергей", "Пашинин", Gender.MALE, 10);
         Director director2 = new Director("Ольга", "Иванова", Gender.FEMALE, 5);
 
-        String musicAuthor = "Игорь Стравинский";
-        String choreographer = "Михаил Фокин";
+        MusicAuthor musicAuthor = new MusicAuthor("Игорь", "Стравинский", Gender.MALE);
+        Choreographer choreographer = new Choreographer("Михаил", "Фокин", Gender.MALE);
 
         ArrayList<Actor> actorsForShow = new ArrayList<>();
         actorsForShow.add(actor1);
@@ -27,15 +27,15 @@ public class Theatre {
 
         System.out.println("=== Гамлет ===");
         show.printActors();
-        System.out.println("Режиссер: " + show.getDirector());
+        show.printDirector();
 
         System.out.println("=== Опера ===");
         opera.printActors();
-        System.out.println("Режиссер: " + opera.getDirector());
+        opera.printDirector();
 
         System.out.println("=== Балет ===");
         ballet.printActors();
-        System.out.println("Режиссер: " + ballet.getDirector());
+        ballet.printDirector();
 
         show.replaceActor("Петров", actor3);
 
