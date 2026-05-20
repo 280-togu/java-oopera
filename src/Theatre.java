@@ -23,24 +23,21 @@ public class Theatre {
 
         MusicalShow ballet = new Ballet("Лебединое озеро", 140, director1, new ArrayList<>(actorsForShow), musicAuthor, "Либретто балета Лебединое озеро", choreographer);
 
-        show.addActor(actor3);
         opera.addActor(actor3);
 
         System.out.println("=== Гамлет ===");
         show.printActors();
-        System.out.println("Режиссер: " + show.director);
+        System.out.println("Режиссер: " + show.getDirector());
 
         System.out.println("=== Опера ===");
         opera.printActors();
-        System.out.println("Режиссер: " + opera.director);
+        System.out.println("Режиссер: " + opera.getDirector());
 
         System.out.println("=== Балет ===");
         ballet.printActors();
-        System.out.println("Режиссер: " + ballet.director);
+        System.out.println("Режиссер: " + ballet.getDirector());
 
-        Actor replacement = new Actor("Новый", "Актёр", Gender.MALE, 185);
-
-        show.replaceActor("Петров", replacement);
+        show.replaceActor("Петров", actor3);
 
         System.out.println("=== Гамлет после замены ===");
         show.printActors();
