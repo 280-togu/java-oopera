@@ -28,12 +28,15 @@ public class Theatre {
 
         System.out.println("=== Гамлет ===");
         show.printActors();
+        System.out.println("Режиссер: " + show.director);
 
         System.out.println("=== Опера ===");
         opera.printActors();
+        System.out.println("Режиссер: " + opera.director);
 
         System.out.println("=== Балет ===");
         ballet.printActors();
+        System.out.println("Режиссер: " + ballet.director);
 
         Actor replacement = new Actor("Новый", "Актёр", Gender.MALE, 185);
 
