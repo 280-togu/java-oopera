@@ -13,15 +13,20 @@ public class Theatre {
         MusicAuthor musicAuthor = new MusicAuthor("Игорь", "Стравинский", Gender.MALE);
         Choreographer choreographer = new Choreographer("Михаил", "Фокин", Gender.MALE);
 
-        ArrayList<Actor> actorsForShow = new ArrayList<>();
-        actorsForShow.add(actor1);
-        actorsForShow.add(actor2);
 
-        Show show = new Show("Гамлет", 120, director1, new ArrayList<>(actorsForShow));
 
-        MusicalShow opera = new Opera("Кармен", 150, director2, new ArrayList<>(actorsForShow), musicAuthor, "Либретто оперы Кармен", 20);
+        Show show = new Show("Гамлет", 120, director1, new ArrayList<>());
+        show.addActor(actor1);
+        show.addActor(actor2);
 
-        MusicalShow ballet = new Ballet("Лебединое озеро", 140, director1, new ArrayList<>(actorsForShow), musicAuthor, "Либретто балета Лебединое озеро", choreographer);
+        MusicalShow opera = new Opera("Кармен", 150, director2, new ArrayList<>(), musicAuthor, "Либретто оперы Кармен", 20);
+        opera.addActor(actor1);
+        opera.addActor(actor2);
+        opera.addActor(actor3);
+
+        MusicalShow ballet = new Ballet("Лебединое озеро", 140, director1, new ArrayList<>(), musicAuthor, "Либретто балета Лебединое озеро", choreographer);
+        ballet.addActor(actor1);
+        ballet.addActor(actor2);
 
         opera.addActor(actor3);
 
